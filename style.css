@@ -1,0 +1,21 @@
+.diagnosis{
+    color:#fff;
+    padding:0.2em 0.5rem;
+    border-radius: 0.5em;
+}
+
+
+.diagnosis.benign{
+    background-color: green;
+}
+
+.diagnosis.malicious{
+    background-color: red;
+}
+
+/* .e1f1d6gn0{
+
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: beige;
+} */
