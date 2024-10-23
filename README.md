@@ -1,6 +1,7 @@
 # Streamlit Breast Cancer Predictor
 
 This repository contains a web application built using **Streamlit** to predict breast cancer diagnosis using a logistic regression model. The app uses features from the **Breast Cancer Wisconsin Dataset** to determine if a tumor is benign or malignant.
+![image](https://github.com/user-attachments/assets/cabaaa8d-fc43-4a49-b035-fddbfa590a36)
 
 ## Features:
 - **Interactive Inputs**: Users can input breast tissue measurements via sliders in the sidebar.
@@ -67,3 +68,5 @@ Feel free to contribute to the project by creating pull requests or raising issu
 
 ## License
 Specify your project license (e.g., MIT License).
+
+
