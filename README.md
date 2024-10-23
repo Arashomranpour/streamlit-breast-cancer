@@ -39,6 +39,8 @@ This repository contains a web application built using **Streamlit** to predict 
     streamlit run src/stream.py
     ```
 
+   ** put all of the files in a folder **
+
 ## Data
 The app uses the **Breast Cancer Wisconsin Dataset**. Ensure that the dataset (`data.csv`) is located in the `data/` folder. The dataset should have the following features:
 - Radius
