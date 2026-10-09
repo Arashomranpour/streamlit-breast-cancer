@@ -1,72 +1,72 @@
-# Streamlit Breast Cancer Predictor
+<div align="center">
 
-This repository contains a web application built using **Streamlit** to predict breast cancer diagnosis using a logistic regression model. The app uses features from the **Breast Cancer Wisconsin Dataset** to determine if a tumor is benign or malignant.
-![image](https://github.com/user-attachments/assets/cabaaa8d-fc43-4a49-b035-fddbfa590a36)
+# 🩺 Breast Cancer Predictor
 
-## Features:
-- **Interactive Inputs**: Users can input breast tissue measurements via sliders in the sidebar.
-- **Radar Charts**: Visualizes the data in an easy-to-understand radar chart format.
-- **Prediction**: Uses a trained Logistic Regression model to predict whether the tumor is benign or malignant, providing probability estimates.
+**An interactive Streamlit app that predicts whether a tumor is benign or malignant from cell-nucleus measurements, using logistic regression.**
 
-## Installation
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikitlearn&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?logo=plotly&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
 
-### Requirements:
+</div>
+
+---
+
+![App screenshot](https://github.com/user-attachments/assets/cabaaa8d-fc43-4a49-b035-fddbfa590a36)
+
+## ✨ Features
+
+- 🎚️ **Interactive inputs** - adjust the tissue measurements with sliders in the sidebar.
+- 🕸️ **Radar chart** - visualizes the measurements (Plotly).
+- 🤖 **Prediction** - a Logistic Regression model (with a `StandardScaler`) classifies the sample as **Benign** or **Malicious** and shows both class probabilities.
+- 🎨 Custom CSS styling for the diagnosis badge.
+
+Uses the **Breast Cancer Wisconsin (Diagnostic)** dataset.
+
+> ⚠️ This app is a learning project that can assist exploration. It is **not** a substitute for professional medical diagnosis.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
 - Python 3.8+
-- Streamlit
-- Pandas
-- Numpy
-- Scikit-learn
-- Plotly
+- `data.csv` - the Breast Cancer Wisconsin dataset (columns `id`, `diagnosis`, the 30 measurement features)
 
-### Steps:
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/Arashomranpour/streamlit-breast-cancer.git
-    cd streamlit-breast-cancer
-    ```
+### Install
 
-2. Install the dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+git clone https://github.com/Arashomranpour/streamlit-breast-cancer.git
+cd streamlit-breast-cancer
+pip install streamlit pandas numpy scikit-learn plotly
+```
 
-3. Train the model:
-    ```bash
-    python src/main.py
-    ```
+### Train the model, then run the app
 
-4. Run the Streamlit app:
-    ```bash
-    streamlit run src/stream.py
-    ```
+```bash
+# 1. Train: creates model.pkl and scaler.pkl (also prints accuracy + classification report)
+python src/main.py
 
-   ** put all of the files in a folder **
+# 2. Launch the app
+streamlit run src/stream.py
+```
 
-## Data
-The app uses the **Breast Cancer Wisconsin Dataset**. Ensure that the dataset (`data.csv`) is located in the `data/` folder. The dataset should have the following features:
-- Radius
-- Texture
-- Perimeter
-- Area
-- Smoothness
-- Compactness
-- Concavity
-- Concave Points
-- Symmetry
-- Fractal Dimension
+Keep `data.csv`, `style.css`, `model.pkl` and `scaler.pkl` in the folder you run the commands from, as the scripts load them by relative path.
 
-## Usage
+## 📁 Project Structure
 
-- **Model Training**:  
-  Run the `main.py` file to train the Logistic Regression model, which will output `model.pkl` and `scaler.pkl`.
+```
+.
+├── src/
+│   ├── main.py      # Data cleaning, training, evaluation, saves model + scaler
+│   └── stream.py    # Streamlit app: sliders, radar chart, prediction
+└── style.css        # App styling
+```
 
-- **Web Application**:  
-  After running the Streamlit app (`stream.py`), use the sliders to adjust measurements and visualize the predictions. The model will predict whether the tumor is benign or malignant.
+## 🛠️ Tech Stack
 
-## Contribution
-Feel free to contribute to the project by creating pull requests or raising issues.
+`Streamlit` · `scikit-learn` · `pandas` · `NumPy` · `Plotly`
 
-## License
-Specify your project license (e.g., MIT License).
+## 🤝 Contributing
 
-
+Pull requests and issues are welcome.
